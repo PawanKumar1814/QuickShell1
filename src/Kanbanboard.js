@@ -15,7 +15,6 @@ import UrgentIcon from './assets/icons_FEtask/urgent.svg';
 import NoPriorityIcon from './assets/icons_FEtask/canceled.svg';
 
 import UserIcon from './assets/icons_FEtask/Display.svg';
-// Importing the plus and dots icons
 import PlusIcon from './assets/icons_FEtask/add.svg';
 import DotsIcon from './assets/icons_FEtask/3-dotmenu.svg';
 
@@ -37,7 +36,7 @@ const Kanbanboard = ({ tickets, users}) => {
     switch (groupBy) {
       case 'status':
         return tickets.reduce((acc, ticket) => {
-          const status = ticket.status.toLowerCase(); // Normalize status
+          const status = ticket.status.toLowerCase(); 
           acc[status] = acc[status] || [];
           acc[status].push(ticket);
           return acc;
@@ -73,17 +72,17 @@ const Kanbanboard = ({ tickets, users}) => {
   };
 
   const getPriorityName = (priorityId) => {
-    return priorityMapping[priorityId] || 'Unknown Priority'; // Return priority name or fallback
+    return priorityMapping[priorityId] || 'Unknown Priority'; 
   };
 
   // Function to sort tickets based on selected option
   const sortTickets = (tickets, sortBy) => {
     return [...tickets].sort((a, b) => {
       if (sortBy === 'priority') {
-        return b.priority - a.priority; // Descending priority
+        return b.priority - a.priority; 
       }
       if (sortBy === 'title') {
-        return a.title.localeCompare(b.title); // Ascending title
+        return a.title.localeCompare(b.title); 
       }
       return 0;
     });
@@ -94,7 +93,7 @@ const Kanbanboard = ({ tickets, users}) => {
 
   // Sort tickets inside each group based on selected option
   const sortedGroupedTickets = Object.keys(groupedTickets).reduce((acc, group) => {
-    acc[group] = sortTickets(groupedTickets[group], sortBy); // Apply sorting to each group
+    acc[group] = sortTickets(groupedTickets[group], sortBy); 
     return acc;
   }, {});
 
@@ -103,15 +102,15 @@ const Kanbanboard = ({ tickets, users}) => {
   if (groupBy === 'status') {
     allStatuses.forEach((status) => {
       if (!sortedGroupedTickets[status]) {
-        sortedGroupedTickets[status] = []; // Add empty array for missing status
+        sortedGroupedTickets[status] = [];
       }
     });
   }
 
   // Function to generate initials (first letter of first and last name)
 const generateInitials = (name) => {
-  const nameParts = name.split(" ");  // Split the name by spaces
-  const firstNameInitial = nameParts[0][0].toUpperCase(); // Get the first letter of first name
+  const nameParts = name.split(" ");  
+  const firstNameInitial = nameParts[0][0].toUpperCase(); 
   const lastNameInitial = nameParts.length > 1 ? nameParts[1][0].toUpperCase() : ''; // Get the first letter of last name
   return firstNameInitial + lastNameInitial; // Combine initials
 };

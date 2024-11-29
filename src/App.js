@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Kanbanboard from './Kanbanboard';
-import './App.css'; // Assuming you have a CSS file for styling
+import './App.css'; 
 //import Dropdownbutton from './Dropdownbutton';
 
 const App = () => {

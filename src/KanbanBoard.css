@@ -77,8 +77,8 @@ body {
 /* Board columns container */
 .board-columns {
   display: flex;
-  justify-content: flex-start; /* Align columns to the left */
-  gap: 10px; /* Reduced gap between columns */
+  justify-content: flex-start; 
+  gap: 10px;
   overflow-x: auto;
   margin-top: 10px;
 }
@@ -151,13 +151,13 @@ body {
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
   .board-columns {
-    flex-direction: column; /* Stack the columns vertically */
-    gap: 15px; /* Add more gap for stacked view */
+    flex-direction: column; 
+    gap: 15px;
   }
 
   .column {
-    min-width: 100%; /* Allow columns to take full width in stacked view */
-    margin: 0; /* Remove margin between columns in stacked view */
+    min-width: 100%; 
+    margin: 0; 
   }
 }
 
@@ -168,7 +168,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  justify-content: space-between; /* Aligns the group name and icons to the ends */
+  justify-content: space-between; 
 }
 
 .ticket-count {
@@ -189,7 +189,7 @@ body {
 }
 
 .icon:hover {
-  opacity: 0.7; /* Slight hover effect */
+  opacity: 0.7; 
 }
 
 /* Make sure icons are properly spaced and displayed correctly */

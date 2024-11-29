@@ -4,57 +4,56 @@ body {
 }
 
 .kanban-board {
-  padding: 10px; /* Reduced padding */
+  padding: 10px; 
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Reduced gap between sections */
-  margin: 1px; /* Reduced margin around the entire board */
+  gap: 10px;
+  margin: 1px; 
 }
 
 /* Controls for Grouping and Sorting dropdowns */
 .controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px; /* Reduced bottom margin */
-  margin-top: 1px; /* Reduced top margin */
+  margin-bottom: 10px; 
+  margin-top: 1px; 
 }
 
 .controls .dropdown {
   display: flex;
   flex-direction: column;
-  gap: 6px; /* Reduced gap between dropdowns */
+  gap: 6px; 
 }
 
 .controls select {
   padding: 5px;
   font-size: 14px;
-  margin: 0 5px; /* Reduced margin between dropdowns */
+  margin: 0 5px;
 }
 
 /* Container for the Kanban columns */
 .board-columns {
   display: flex;
-  justify-content: flex-start; /* Align columns to the left */
-  gap: 5px; /* Reduced gap between columns */
+  justify-content: flex-start; 
+  gap: 5px; 
   overflow-x: auto;
-  margin-top: 1px; /* Reduced margin to space out the board columns from the controls */
+  margin-top: 1px; 
 }
 
 /* Styling for individual Kanban columns (Todo, In Progress, etc.) */
 .column {
   flex: 1;
-  min-width: 160px; /* Reduced min-width for columns */
-  padding: 8px; /* Reduced padding inside columns */
+  min-width: 160px; 
+  padding: 8px; 
   border-radius: 8px;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  margin: 0 2px; /* Reduced horizontal margin between columns */
+  margin: 0 2px; 
 }
 
 /* Heading inside columns */
 .column h3 {
   text-align: center;
   font-size: 14px;
-  margin-bottom: 10px; /* Reduced space below headings */
+  margin-bottom: 10px; 
 }
 
 
