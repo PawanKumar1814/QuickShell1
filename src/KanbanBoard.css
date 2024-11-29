@@ -1,0 +1,202 @@
+/* KanbanBoard.css */
+
+/* Body styling */
+body {
+  background-color: #f1f7fb;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Kanban board container */
+.kanban-board {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Controls container */
+.controls {
+  margin-bottom: 20px;
+}
+
+.main-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.main-dropdown-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-dropdown-content {
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-option {
+  padding: 10px;
+}
+
+.dropdown-option .dropdown-toggle {
+  background-color: #ddd;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #ddd;
+}
+
+/* Board columns container */
+.board-columns {
+  display: flex;
+  justify-content: flex-start; /* Align columns to the left */
+  gap: 10px; /* Reduced gap between columns */
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+/* Styling for individual Kanban columns */
+.column {
+  flex: 1 1 0;
+  min-width: 200px;
+  padding: 10px;
+  border: none;
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column header style for alignment */
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.column-header h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+/* Empty column state (if no tickets for this status) */
+.empty-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* Styling for individual ticket cards */
+.ticket-card {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-card h4 {
+  font-size: 12px;
+  font-weight: bolder;
+  margin: 0 0 5px;
+}
+
+.ticket-card p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+.ticket-card p strong {
+  font-weight: bold;
+}
+
+/* Styling for group icons */
+.group-icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .board-columns {
+    flex-direction: column; /* Stack the columns vertically */
+    gap: 15px; /* Add more gap for stacked view */
+  }
+
+  .column {
+    min-width: 100%; /* Allow columns to take full width in stacked view */
+    margin: 0; /* Remove margin between columns in stacked view */
+  }
+}
+
+/* KanbanBoard.css */
+
+/* Add styles for the new icons and counts */
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between; /* Aligns the group name and icons to the ends */
+}
+
+.ticket-count {
+  font-size: 14px;
+  color: #777;
+  margin-left: 4px;
+}
+
+.column-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 0.7; /* Slight hover effect */
+}
+
+/* Make sure icons are properly spaced and displayed correctly */
+.column-actions img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+ 
+}
+
